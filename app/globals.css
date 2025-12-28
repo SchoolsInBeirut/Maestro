@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #101010;
+  --muted: #f5f1e6;
+  --border: #efe9d7;
+  --gold: #d4af37;
+  --gold-soft: #e8d9a8;
+  --red: #8b0000;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.card {
+  @apply rounded-xl border border-[--border] bg-white shadow-soft;
+}
+
+.leaflet-container {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.leaflet-control-container {
+  display: none;
+}
+
+.badge {
+  @apply inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full border border-[--border] bg-[--muted] text-[--foreground];
+}
+
+.btn-chip {
+  @apply inline-flex items-center gap-2 px-3 py-2 rounded-full border text-sm transition-colors;
+}
